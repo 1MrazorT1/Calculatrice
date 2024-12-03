@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonToTheY"
+        android:autoSizeTextType="uniform"
+        android:autoSizeStepGranularity="1sp"
+        android:gravity="center"
+        android:backgroundTint="@color/light_grey"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="x^y"
+
+        app:layout_constraintBottom_toTopOf="@+id/buttonToRAD"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/buttonToTheFourth"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/buttonExp"
+        android:autoSizeTextType="uniform"
+        android:autoSizeStepGranularity="1sp"
+        android:gravity="center"
+        android:backgroundTint="@color/light_grey"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="exp(x)"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAbs"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/buttonCube"
+        android:autoSizeTextType="uniform"
+        android:autoSizeStepGranularity="1sp"
+        android:gravity="center"
+        android:backgroundTint="@color/light_grey"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="x^3"
+        app:layout_constraintBottom_toTopOf="@+id/buttonE"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/buttonSquare"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/buttonInverse"
+        android:autoSizeTextType="uniform"
+        android:autoSizeStepGranularity="1sp"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="@color/light_grey"
+        android:text="1/x"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCube"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/buttonLog"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/buttonMod"
+        android:autoSizeTextType="uniform"
+        android:autoSizeStepGranularity="1sp"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:backgroundTint="@color/light_grey"
+        android:layout_height="0dp"
+        android:text="%"
+        app:layout_constraintBottom_toTopOf="@+id/buttonsqrt"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/buttonTan"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/buttonSin"
+        android:autoSizeTextType="uniform"
+        android:autoSizeStepGranularity="1sp"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="@color/light_grey"
+        android:text="sin"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLn"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/buttonTan"
+        android:autoSizeTextType="uniform"
+        android:autoSizeStepGranularity="1sp"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:backgroundTint="@color/light_grey"
+        android:layout_height="0dp"
+        android:text="tan"
+        app:layout_constraintBottom_toTopOf="@+id/buttonInverse"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/buttonCos"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/buttonArrengement"
+        android:autoSizeTextType="uniform"
+        android:autoSizeStepGranularity="1sp"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:backgroundTint="@color/light_grey"
+        android:layout_height="0dp"
+        android:text="nPr"
+        app:layout_constraintBottom_toTopOf="@+id/buttonTan"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/buttonCombinaison"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/buttonCombinaison"
+        android:autoSizeTextType="uniform"
+        android:autoSizeStepGranularity="1sp"
+        android:gravity="center"
+        android:backgroundTint="@color/light_grey"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="nCr"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCos"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/buttonFactoriel"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/buttonToTheFourth"
+        android:autoSizeTextType="uniform"
+        android:autoSizeStepGranularity="1sp"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:backgroundTint="@color/light_grey"
+        android:layout_height="0dp"
+        android:text="x^4"
+        app:layout_constraintBottom_toTopOf="@+id/buttonToDEG"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/buttonCube"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/buttonFactoriel"
+        android:autoSizeTextType="uniform"
+        android:autoSizeStepGranularity="1sp"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:backgroundTint="@color/light_grey"
+        android:layout_height="0dp"
+        android:text=".!"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSin"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/buttonLog"
+        android:autoSizeTextType="uniform"
+        android:autoSizeStepGranularity="1sp"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:backgroundTint="@color/light_grey"
+        android:layout_height="0dp"
+        android:text="log"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSquare"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/buttonLn"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/buttonsqrt"
+        android:autoSizeTextType="uniform"
+        android:autoSizeStepGranularity="1sp"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:backgroundTint="@color/light_grey"
+        android:layout_height="0dp"
+        android:text="√"
+        app:layout_constraintBottom_toTopOf="@+id/buttonToTheFourth"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/buttonInverse"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/button10ToTheX"
+        android:autoSizeTextType="uniform"
+        android:autoSizeStepGranularity="1sp"
+        android:gravity="center"
+        android:backgroundTint="@color/light_grey"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="10^x"
+        app:layout_constraintBottom_toTopOf="@+id/buttonNiemeSqrt"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/buttonMod"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/buttonParentheseFerme"
+        android:autoSizeTextType="uniform"
+        android:autoSizeStepGranularity="1sp"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:backgroundTint="@color/light_grey"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        android:text=")"
+        app:layout_constraintBottom_toTopOf="@+id/button10ToTheX"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/buttonParentheseOuvert"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/buttonNiemeSqrt"
+        android:autoSizeTextType="uniform"
+        android:autoSizeStepGranularity="1sp"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:backgroundTint="@color/light_grey"
+        android:layout_height="0dp"
+        android:text="n√"
+        app:layout_constraintBottom_toTopOf="@+id/buttonToTheY"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/buttonsqrt"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/buttonCos"
+        android:autoSizeTextType="uniform"
+        android:autoSizeStepGranularity="1sp"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:backgroundTint="@color/light_grey"
+        android:layout_height="0dp"
+        android:text="cos"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLog"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/buttonSin"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/buttonLn"
+        android:autoSizeTextType="uniform"
+        android:autoSizeStepGranularity="1sp"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:backgroundTint="@color/light_grey"
+        android:layout_height="0dp"
+        android:text="ln"
+        app:layout_constraintBottom_toTopOf="@+id/buttonExp"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/buttonSquare"
+        android:autoSizeTextType="uniform"
+        android:autoSizeStepGranularity="1sp"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="@color/light_grey"
+        android:text="x²"
+        app:layout_constraintBottom_toTopOf="@+id/buttonPi"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/buttonExp"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/buttonParentheseOuvert"
+        android:autoSizeTextType="uniform"
+        android:autoSizeStepGranularity="1sp"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="@color/light_grey"
+        android:text="("
+        app:layout_constraintBottom_toTopOf="@+id/buttonMod"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/buttonArrengement"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/buttonAbs"
+        android:autoSizeTextType="uniform"
+        android:autoSizeStepGranularity="1sp"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="@color/light_grey"
+        android:text="|.|"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/buttonToRAD"
+        android:autoSizeTextType="uniform"
+        android:autoSizeStepGranularity="1sp"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:backgroundTint="@color/light_grey"
+        android:layout_height="0dp"
+        android:text="RAD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/buttonToDEG"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/buttonPi"
+        android:autoSizeTextType="uniform"
+        android:autoSizeStepGranularity="1sp"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:backgroundTint="@color/light_grey"
+        android:layout_height="0dp"
+        android:text="π"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/buttonAbs"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/buttonToDEG"
+        android:autoSizeTextType="uniform"
+        android:autoSizeStepGranularity="1sp"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="@color/light_grey"
+        android:text="DEG"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/buttonE"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/buttonE"
+        android:autoSizeTextType="uniform"
+        android:autoSizeStepGranularity="1sp"
+        android:gravity="center"
+        android:backgroundTint="@color/light_grey"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="e"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/buttonPi"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/buttonClearInput"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="44dp"
+        android:autoSizeStepGranularity="1sp"
+        android:autoSizeTextType="uniform"
+        android:backgroundTint="@color/yellow"
+        android:gravity="center"
+        android:text="CE"
+        app:layout_constraintBottom_toTopOf="@+id/button7"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/buttonParentheseFerme"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/buttonSign"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="44dp"
+        android:autoSizeStepGranularity="1sp"
+        android:autoSizeTextType="uniform"
+        android:backgroundTint="@color/light_grey"
+        android:gravity="center"
+        android:text="+/-"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/buttonToRAD"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/buttonTimes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeStepGranularity="1sp"
+        android:autoSizeTextType="uniform"
+        android:backgroundTint="@color/grey"
+        android:gravity="center"
+        android:text="*"
+        app:layout_constraintBottom_toTopOf="@+id/buttonMinus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toEndOf="@+id/button9"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/buttonEqual"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="9dp"
+        android:autoSizeStepGranularity="1sp"
+        android:autoSizeTextType="uniform"
+        android:backgroundTint="@color/orange"
+        android:gravity="center"
+        android:text="="
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/buttonPoint"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/buttonSlash"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeStepGranularity="1sp"
+        android:autoSizeTextType="uniform"
+        android:backgroundTint="@color/grey"
+        android:gravity="center"
+        android:text="/"
+        app:layout_constraintBottom_toTopOf="@+id/buttonTimes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toEndOf="@+id/buttonRemove"
+        app:layout_constraintWidth_percent="0.099"
+        app:rippleColor="#D30303" />
+
+    <Button
+        android:id="@+id/buttonClear"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:autoSizeStepGranularity="1sp"
+        android:autoSizeTextType="uniform"
+        android:backgroundTint="@color/yellow"
+        android:gravity="center"
+        android:text="C"
+        app:layout_constraintBottom_toTopOf="@+id/button8"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/buttonClearInput"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="44dp"
+        android:autoSizeStepGranularity="1sp"
+        android:autoSizeTextType="uniform"
+        android:backgroundTint="#E6BB8F"
+        android:gravity="center"
+        android:text="7"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/button10ToTheX"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:autoSizeStepGranularity="1sp"
+        android:autoSizeTextType="uniform"
+        android:backgroundTint="#E6BB8F"
+        android:gravity="center"
+        android:text="8"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/button7"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="44dp"
+        android:autoSizeStepGranularity="1sp"
+        android:autoSizeTextType="uniform"
+        android:backgroundTint="#E6BB8F"
+        android:gravity="center"
+        android:text="1"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSign"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/buttonToTheY"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/button0"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:autoSizeStepGranularity="1sp"
+        android:autoSizeTextType="uniform"
+        android:backgroundTint="#E6BB8F"
+        android:gravity="center"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/buttonSign"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:autoSizeStepGranularity="1sp"
+        android:autoSizeTextType="uniform"
+        android:backgroundTint="#E6BB8F"
+        android:gravity="center"
+        android:text="9"
+        app:layout_constraintBottom_toTopOf="@+id/button6"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/button8"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:autoSizeStepGranularity="1sp"
+        android:autoSizeTextType="uniform"
+        android:backgroundTint="#E6BB8F"
+        android:gravity="center"
+        android:text="3"
+        app:layout_constraintBottom_toTopOf="@+id/buttonPoint"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/buttonPoint"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:autoSizeStepGranularity="1sp"
+        android:autoSizeTextType="uniform"
+        android:backgroundTint="@color/light_grey"
+        android:gravity="center"
+        android:text="."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/button0"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/buttonMinus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:autoSizeStepGranularity="1sp"
+        android:autoSizeTextType="uniform"
+        android:backgroundTint="@color/grey"
+        android:gravity="center"
+        android:text="-"
+        app:layout_constraintBottom_toTopOf="@+id/buttonPlus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/button6"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/buttonRemove"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:autoSizeStepGranularity="1sp"
+        android:autoSizeTextType="uniform"
+        android:backgroundTint="@color/grey"
+        android:gravity="center"
+        android:text="⌫"
+        app:layout_constraintBottom_toTopOf="@+id/button9"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/buttonClear"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:autoSizeStepGranularity="1sp"
+        android:autoSizeTextType="uniform"
+        android:backgroundTint="#E6BB8F"
+        android:gravity="center"
+        android:text="6"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/button5"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/buttonPlus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:autoSizeStepGranularity="1sp"
+        android:autoSizeTextType="uniform"
+        android:backgroundTint="@color/grey"
+        android:gravity="center"
+        android:text="+"
+        app:layout_constraintBottom_toTopOf="@+id/buttonEqual"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:autoSizeStepGranularity="1sp"
+        android:autoSizeTextType="uniform"
+        android:backgroundTint="#E6BB8F"
+        android:gravity="center"
+        android:text="5"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/button4"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="44dp"
+        android:autoSizeStepGranularity="1sp"
+        android:autoSizeTextType="uniform"
+        android:backgroundTint="#E6BB8F"
+        android:gravity="center"
+        android:text="4"
+        app:layout_constraintBottom_toTopOf="@+id/button1"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/buttonNiemeSqrt"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:autoSizeStepGranularity="1sp"
+        android:autoSizeTextType="uniform"
+        android:backgroundTint="#E6BB8F"
+        android:gravity="center"
+        android:text="2"
+        app:layout_constraintBottom_toTopOf="@+id/button0"
+        app:layout_constraintHeight_percent="0.157"
+        app:layout_constraintStart_toEndOf="@+id/button1"
+        app:layout_constraintWidth_percent="0.099" />
+
+    <HorizontalScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintHeight_percent="0.25"
+        app:layout_constraintWidth_percent="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/buttonParentheseFerme">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeMaxTextSize="40sp"
+            android:autoSizeStepGranularity="2sp"
+            android:gravity="center"
+            android:text=" "
+            android:textColor="@color/material_dynamic_primary40"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:padding="8dp" />
+    </HorizontalScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
