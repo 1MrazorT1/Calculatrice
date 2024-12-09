@@ -28,8 +28,13 @@
 						<li><a href="#four">UI Design</a></li>
 						<li><a href="#five">Functionality Implementation</a></li>
 						<li><a href="#six">Challenges and Areas for Improvement</a></li>
-						<li><a href="#seven">Future Work</a></li>
+						<li><a href="#seven">Demo</a></li>
 						<li><a href="#eight">Conclusion</a></li>
+						<li><a href="#nine">Grid Evaluation</a></li>
+						<li><a href="#ten">Principes UX - Joel Marsh</a></li>
+						<li><a href="#eleven">Critique du Travail</a></li>
+						<li><a href="#twelve">Technique Test Avancées</a></li>
+						<li><a href="#thirteen">Analyse de vulnérabilité CVE des dependances</a></li>
 					</ul>
 				</nav>
 				<footer>
@@ -59,7 +64,7 @@
 										<h2>Overview</h2>
 										<p>A calculator mobile application developed as part of my academic projects.</p>
 									</header>
-									<p>Available in both simple and scientific layouts, my calculator provides an efficient and responsive space to do the math for you (couldn't come up with a better intro...after all, it's a calculator, did you expect it to run youtube on it ?)</p>
+									<p>Available in both simple and scientific layouts, my calculator provides an efficient and responsive space to do the math for you.</p>
 								</div>
 							</section>
 
@@ -232,51 +237,60 @@
 						<!-- Eight -->
 						<section id="eight">
 							<div class="container">
+								<h3>Conclusion</h3>
+								<p>This calculator app demonstrates a foundational implementation of a robust mathematical tool for Android devices. While it offers essential functionalities, further refinements in both UI and feature set will enhance its utility and user experience.</p>
+							</div>
+						</section>
+
+						<!-- Nine -->
+						<section id="nine">
+							<div class="container">
 								<h3>Grid evaluation</h3>
 								<section>
 									<h4>Elements from the excel file that I worked on:</h4>
+									<p>(Please click on the ticks for more details, also please note that non clickable ticks are implementational and for code only.)</p>
 									<div class="table-wrapper">
 										<table class="alt">
 											<tbody>
 												<tr>
 													<td>Rapport</td>
 													<td>Principes UX - Joel Marsh</td>
-													<td></td>
+													<td><a href="#ten">✓</a></td>
 												</tr>
 												<tr>
 													<td></td>
 													<td>Critique travail</td>
-													<td></td>
+													<td><a href="#eleven">✓</a></td>
 												</tr>
 												<tr>
 													<td></td>
 													<td>Presentation innovation</td>
-													<td>✓</td>
+													<td><a href="#one">✓</a></td>
 												</tr>
 												<tr>
 													<td></td>
 													<td>Rapport GitLab Pages</td>
-													<td>✓</td>
+													<td><a href="https://1mrazort1.github.io/Calculatrice/Rapport/index.html">✓</a></td>
 												</tr>
 												<tr>
 													<td></td>
 													<td>Indications de ce qui est fait</td>
-													<td>✓</td>
+													<td><a href="#nine">✓</a></td>
 												</tr>
 												<tr>
 													<td>Test unitaire</td>
 													<td>Nommage</td>
-													<td></td>
+													<td>✓</td>
 												</tr>
 												<tr>
 													<td></td>
 													<td>Effort fonctionnel</td>
-													<td></td>
+													<td>✓</td>
 												</tr>
 												<tr>
 													<td></td>
 													<td>Technique Test avancées</td>
-													<td></td>
+													<td><a href="#twelve">✓</a></td>
 												</tr>
 												<tr>
 													<td>Application</td>
@@ -376,7 +390,7 @@
 												<tr>
 													<td></td>
 													<td>Qualité de rapport</td>
-													<td>✓</td>
+													<td>Professor's judgement</td>
 												</tr>
 												<tr>
 													<td></td>
@@ -401,13 +415,74 @@
 							</div>
 						</section>
 
-						<!-- Nine -->
-							<section id="nine">
-								<div class="container">
-									<h3>Conclusion</h3>
-									<p>This calculator app demonstrates a foundational implementation of a robust mathematical tool for Android devices. While it offers essential functionalities, further refinements in both UI and feature set will enhance its utility and user experience.</p>
+						<!-- Ten -->
+						<section id="ten">
+							<div class="container">
+								<h3>Principes UX - Joel Marsh</h3>
+								<p>In my calculator app, I focused on applying Joel Marsh's principles of <strong>Visual Design</strong> and <strong>Functional Layout</strong> Design to create a clean and intuitive experience. I used Visual Weight, Contrast, & Depth by making key buttons like "CE" and "=" stand out with bold orange against a dark background, ensuring they grab attention. I also paid attention to Alignment & Proximity, carefully arranging the circular buttons in a consistent grid that groups related functions together, making the layout easy to navigate. From a functional perspective, I designed the interface to follow a natural Z-Pattern and Visual Hierarchy, so users can quickly scan and interact with it. By keeping frequently used buttons easily accessible and visually clear, I feel like I’ve created an app that balances both usability and simplicity.</p>
+							</div>
+						</section>
+
+						<!-- Eleven -->
+						<section id="eleven">
+							<div class="container">
+								<h3>Critique du travail</h3>
+								<p>I’m proud of the foundation I built with my calculator app, especially the clean UI, responsive design, and functional basic operations. The app works smoothly for arithmetic calculations, and the use of the mxparser library was effective for handling expressions. However, I recognize there’s still room for improvement. Some scientific features are placeholders, which I’d like to implement fully, and the parsing logic could be optimized to handle complex expressions more efficiently. Overall, it’s a strong start, and I’m excited to refine it further.</p>
+							</div>
+						</section>
+
+						<!-- Twelve -->
+						<section id="twelve">
+							<div class="container">
+								<h3>Technique Test Avancées</h3>
+								<p>I have used the jacoco to mesure my code coverage. The jacoco report file is a generated html that you can find in Calculatrice\app\build\reports\jacoco\jacocoTestReport\html\index.html .</p>
+							</div>
+						</section>
+
+						<!-- Thirteen -->
+						<section id="thirteen">
+							<div class="container">
+								<h3>Analyse de vulnérabilité CVE des dependances</h3>
+								<p>I used OWASP Dependency-Check as my dependency vulnerability scanner. The analysis revealed 82 vulnerabilities in the dependencies used in my projects. I have detailed some of them in the table below:</p>
+								<div class="table-wrapper">
+									<table class="alt">							
+										<tbody>
+											<tr>
+												<td><strong>Dependency</strong></td>
+												<td><strong>CVE ID</strong></td>
+												<td><strong>Issue</strong></td>
+											</tr>
+											<tr>
+												<td>MathParser.org-mXparser (4.4.2)</td>
+												<td>CVE-2008-3891</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>Google Guava (28.1-jre)</td>
+												<td>CVE-2023-2976, CVE-2020-8908</td>
+												<td>Known vulnerabilities in Guava versions related to deserialization issues and insecure configuration.</td>
+											</tr>
+											<tr>
+												<td>Apache Commons IO (2.13.0)</td>
+												<td>CVE ID: CVE-2024-47554</td>
+												<td>Vulnerability related to path traversal and insecure file handling.</td>
+											</tr>
+											<tr>
+												<td>Netty (4.1.72.Final and 4.1.93.Final)</td>
+												<td>CVE-2023-44487, CVE-2023-34462, CVE-2022-24823, etc.</td>
+												<td>Multiple vulnerabilities, including DoS attacks (HTTP/2 Rapid Reset) and remote execution risks.</td>
+											</tr>
+											<tr>
+												<td>GRPC (1.57.0)</td>
+												<td>CVE-2023-44487</td>
+												<td>Vulnerability in GRPC related to HTTP/2 processing.</td>
+											</tr>
+											
+										</tbody>
+									</table>
 								</div>
-							</section>
+							</div>
+						</section>
 						
 				<!-- Footer -->
 					<section id="footer">

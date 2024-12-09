@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     id ("jacoco")
+    id("org.owasp.dependencycheck") version "8.3.1"
 }
 
 android {
