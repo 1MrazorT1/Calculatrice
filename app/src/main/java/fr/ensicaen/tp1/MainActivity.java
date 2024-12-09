@@ -1,5 +1,6 @@
 package fr.ensicaen.tp1;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,10 +14,10 @@ import androidx.core.view.WindowInsetsCompat;
 
 import org.mariuszgromada.math.mxparser.Expression;
 
+
 public class MainActivity extends AppCompatActivity {
     double value1 = 0;
     double value2;
-    char currentOperator;
     Button button0, button1, button2, button3, button4, button5, button6, button7, button8, button9;
     Button buttonPlus, buttonMinus, buttonTimes, buttonSlash, buttonEqual;
     Button buttonClear, buttonClearInput, buttonRemove, buttonPoint, buttonSign;
@@ -77,10 +78,9 @@ public class MainActivity extends AppCompatActivity {
         textView = findViewById(R.id.textView);
     }
 
-    public boolean containsNonNumeric(String input) {
-        return !input.matches("\\d*\\.?\\d*");
-    }
 
+
+    @SuppressLint("SetTextI18n")
     private void setupListeners(){
         View.OnClickListener numberListener = v -> {
             if (isResultDisplayed) {
@@ -104,32 +104,11 @@ public class MainActivity extends AppCompatActivity {
         button8.setOnClickListener(numberListener);
         button9.setOnClickListener(numberListener);
 
-        /*if(buttonPlus != null){
-            buttonPlus.setOnClickListener(v -> operation('+'));
-        }
-        if(buttonMinus != null){
-            buttonMinus.setOnClickListener(v -> operation('-'));
-        }
-
-        if(buttonTimes != null){
-            buttonTimes.setOnClickListener(v -> operation('*'));
-        }
-
-        if(buttonSlash != null){
-            buttonSlash.setOnClickListener(v -> operation('/'));
-        }*/
-
         if (buttonEqual != null) {
             buttonEqual.setOnClickListener(v -> {
                 String input = textView.getText().toString().trim();
                 if (!input.isEmpty()) {
-                    Expression exp = new Expression(input);
-                    double result = exp.calculate();
-                    if (Double.isNaN(result) || Double.isInfinite(result)) {
-                        textView.setText("Error");
-                    } else {
-                        textView.setText(String.valueOf(result));
-                    }
+                    textView.setText(Calculator.calculate(input));
                 } else {
                     textView.setText("Error");
                 }
@@ -151,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
         if(buttonRemove != null){
             buttonRemove.setOnClickListener(v -> {
                 String currentText = textView.getText().toString();
-                if (currentText.length() > 0) {
+                if (!currentText.isEmpty()) {
                     textView.setText(currentText.substring(0, currentText.length() - 1));
                 }
             });
@@ -184,9 +163,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if(buttonSin != null){
-            buttonSin.setOnClickListener(v -> {
-                textView.setText("NOT IMPLEMENTED YET...");
-            });
+            buttonSin.setOnClickListener(v -> textView.setText("NOT IMPLEMENTED YET..."));
         }
 
         if(buttonCos != null){
@@ -341,46 +318,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void operation(char operator) {
-        String input = textView.getText().toString().trim();
-        if (input.isEmpty()) {
-            return;
-        }
-
-        try {
-            if (value1 != 0) {
-                value2 = Double.parseDouble(input);
-                calculResultat();
-                textView.setText(String.valueOf(value1));
-            } else {
-                value1 = Double.parseDouble(input);
-            }
-            currentOperator = operator;
-            textView.setText("");
-        } catch (NumberFormatException e) {
-            return;
-        }
-    }
-
-
-    private void calculResultat() {
-        try {
-            String expression = textView.getText().toString().trim();
-            Expression exp = new Expression(expression);
-            double result = exp.calculate();
-
-            if (Double.isNaN(result) || Double.isInfinite(result)) {
-                textView.setText("Error");
-                value1 = 0;
-            } else {
-                value1 = result;
-                textView.setText(String.valueOf(value1));
-            }
-        } catch (Exception e) {
-            textView.setText("Error");
-            value1 = 0;
-        }
-    }
 
     private void setupOperatorListeners() {
         View.OnClickListener operatorListener = v -> {
