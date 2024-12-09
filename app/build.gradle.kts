@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+    id ("jacoco")
 }
 
 android {
@@ -29,6 +30,35 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+}
+
+jacoco {
+    toolVersion = "0.8.12"
+}
+
+tasks.register<JacocoReport>("jacocoTestReport") {
+    dependsOn("testDebugUnitTest")
+
+    reports {
+        xml.required.set(true)
+        html.required.set(true)
+    }
+
+    classDirectories.setFrom(
+        fileTree("${buildDir}/intermediates/javac") {
+            include("**/classes/**")
+            exclude(
+                "**/R.class",
+                "**/R$*.class",
+                "**/BuildConfig.*",
+                "**/Manifest*.*",
+                "**/*Test*.*"
+            )
+        }
+    )
+
+    sourceDirectories.setFrom(files("app/src/main/java/fr/ensicaen/tp1/"))
+    executionData.setFrom(files("${buildDir}/jacoco/testDebugUnitTest.exec"))
 }
 
 dependencies {

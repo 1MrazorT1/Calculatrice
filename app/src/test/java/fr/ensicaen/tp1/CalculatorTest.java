@@ -34,4 +34,31 @@ public class CalculatorTest {
     public void testEmptyExpression() {
         assertEquals("Error", Calculator.calculate(""));
     }
+
+    @Test
+    public void testLargeNumbers() {
+        assertEquals("1.0E18", Calculator.calculate("10^18"));
+        assertEquals("2.0E18", Calculator.calculate("10^18 + 10^18"));
+    }
+
+    @Test
+    public void testSmallNumbersPrecision() {
+        assertEquals("1.0E-10", Calculator.calculate("10^-10"));
+        assertEquals("2.0E-10", Calculator.calculate("10^-10 + 10^-10"));
+    }
+
+    @Test
+    public void testLargeAndSmallNumberCombination() {
+        assertEquals("1.0E18", Calculator.calculate("10^18 + 0.000000000000000001"));
+    }
+
+    @Test
+    public void testMultiplicationWithLargeNumbers() {
+        assertEquals("1.0E36", Calculator.calculate("10^18 * 10^18"));
+    }
+
+    @Test
+    public void testDivisionWithSmallNumbers() {
+        assertEquals("1.0E12", Calculator.calculate("10 / 0.00000000001"));
+    }
 }

@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView textView;
     private boolean isResultDisplayed = false;
-    private void setupElements(){
+    void setupElements(){
         button0 = findViewById(R.id.button0);
         button1 = findViewById(R.id.button1);
         button2 = findViewById(R.id.button2);
